@@ -12,7 +12,7 @@ import org.springframework.dao.EmptyResultDataAccessException;
 import com.devsuperior.dscatalog.entities.Product;
 import com.devsuperior.dscatalog.tests.Factory;
 
-//TESTE DE UNIDADE: carrega somente os componentes relacionados ao spring DATA JPA - injeção de Dependência //
+//-TESTE DE UNIDADE: carrega somente os componentes relacionados ao spring DATA JPA - injeção de Dependência-//
 @DataJpaTest
 public class ProductRepositoryTests {
 	
