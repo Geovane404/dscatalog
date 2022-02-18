@@ -60,7 +60,7 @@ public class ProductServiceTests {
 		category = Factory.createCategory();
 		page = new PageImpl<>(List.of(product));
 		
-		//RETURN: when - ação
+		//RETURN:quando(when)--ação(thenReturn)
 		Mockito.when(repository.findAll((Pageable)ArgumentMatchers.any())).thenReturn(page);
 		Mockito.when(repository.save(ArgumentMatchers.any())).thenReturn(product);
 		Mockito.when(repository.findById(exintingId)).thenReturn(Optional.of(product));
@@ -72,7 +72,7 @@ public class ProductServiceTests {
 		Mockito.when(categoryRepository.getOne(exintingId)).thenReturn(category);
 		Mockito.when(categoryRepository.getOne(nonExistingId)).thenThrow(EntityNotFoundException.class);
 
-		//VOID: ação -- when
+		//VOID: ação -- quando
 		Mockito.doNothing().when(repository).deleteById(exintingId);
 		Mockito.doThrow(EmptyResultDataAccessException.class).when(repository).deleteById(nonExistingId);
 		Mockito.doThrow(DataIntegrityViolationException.class).when(repository).deleteById(dependentId);
