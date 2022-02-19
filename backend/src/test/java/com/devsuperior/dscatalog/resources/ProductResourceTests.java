@@ -33,6 +33,7 @@ import com.devsuperior.dscatalog.services.exceptions.ResourceNotFoundException;
 import com.devsuperior.dscatalog.tests.Factory;
 import com.fasterxml.jackson.databind.ObjectMapper;
 
+//---TESTE DE UNIDADE: carregando o contexto web aplicação - Mockito/MockBean - mockMvc---// 
 @WebMvcTest(ProductResource.class)
 public class ProductResourceTests {
 	

@@ -33,7 +33,7 @@ import com.devsuperior.dscatalog.services.exceptions.DatabaseException;
 import com.devsuperior.dscatalog.services.exceptions.ResourceNotFoundException;
 import com.devsuperior.dscatalog.tests.Factory;
 
-//-TESTE DE UNIDADE: não carrega o contexto da aplicação - Mockito-// 
+//-TESTE DE UNIDADE: não carrega o contexto da aplicação - Mockito/Mock -// 
 @ExtendWith(SpringExtension.class)
 public class ProductServiceTests {
 	
