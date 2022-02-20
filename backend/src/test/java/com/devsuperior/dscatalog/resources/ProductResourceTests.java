@@ -83,7 +83,7 @@ public class ProductResourceTests {
 		
 	}
 	
-	//---findAll(service.findALLPaged):
+	//---findAll
 	@Test
 	public void findAllShouldReturnPage()throws Exception{
 		
@@ -93,7 +93,7 @@ public class ProductResourceTests {
 		result.andExpect(status().isOk());
 	}
 
-	//findById(service.findById):
+	//findById
 	@Test 
 	public void findByIdShouldReturnProductDTOWhenIdExists() throws Exception {
 		ResultActions result = mockMvc.perform(get("/products/{id}", existingId)
@@ -115,7 +115,7 @@ public class ProductResourceTests {
 			result.andExpect(status().isNotFound());
 	}
 	
-	//update(service.update):
+	//update
 	@Test
 	public void updateShouldReturnProductDTOWhenIdExists() throws Exception{
 		String jsonBody = objectMapper.writeValueAsString(productDTO);
@@ -143,8 +143,8 @@ public class ProductResourceTests {
 		
 		result.andExpect(status().isNotFound());
 	}
-	
-	//insert(service.insert):
+
+	//insert
 	@Test 
 	public void insertShouldReturnStatusCreatedAndProductDTO() throws Exception{
 		String jsonBody = objectMapper.writeValueAsString(productDTO);
@@ -163,7 +163,7 @@ public class ProductResourceTests {
 		result.andExpect(jsonPath("$.date").exists());
 	}
 	
-	//delete(service.delete):
+	//delete
 	@Test
 	public void deleteShouldReturnNoContentwhenIdExist ()throws Exception {
 		ResultActions result = mockMvc.perform(delete("/products/{id}", existingId)
