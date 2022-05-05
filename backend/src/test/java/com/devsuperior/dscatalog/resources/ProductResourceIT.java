@@ -69,7 +69,7 @@ public class ProductResourceIT {
 		
 		String expectedName = productDTO.getName();
 		
-		 ResultActions result = mockMvc.perform(put("/products/{id}", existingId)
+		ResultActions result = mockMvc.perform(put("/products/{id}", existingId)
 				 .content(jsonBody)
 				 .contentType(MediaType.APPLICATION_JSON)
 				 .accept(MediaType.APPLICATION_JSON));
